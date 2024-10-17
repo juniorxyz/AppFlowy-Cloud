@@ -31,6 +31,7 @@
 
 # Improvements I'm aiming
 
+0. *currently working on* deploying an element synapse on the same vps/domain/nginx.conf
 1. security - priority
 2. have a small ai model to do simple tasks based on lists/notes (eg. combine all the ingredients from @recipe1 @recipe2 and @recipe3 into a single shopping list) - either on-clients-device or something like ollama hosted on another server
 3. syncing between user seems a liiiiiiiitle clunky sometimes. can we improve?
