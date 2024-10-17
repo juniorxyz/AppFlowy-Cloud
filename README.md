@@ -15,6 +15,31 @@
 
 <p align="center">⚡ The AppFlowy Cloud written with Rust 🦀</p>
 
+# Documented process
+
+1. get vps + domain with ssl + get second ssl to plug into vps + openai api key + mailgun acc (domain dns config -> vps and mailgun)
+2. created user with sudo powed - logged in with user
+3. git cloned /AppFlowy-Cloud
+4. installed nginx, docker engine (/etc/nginx/sites-enabled/default deleted)
+5. edited deploy.env, docker-compose.yml and /migrations/before/20230312043000_supabase_auth.sql (changed passes, smtp mailgun, google oauth, auto-confirm off, openai api, disabled built-in nginx and unused admin servs such as portainer)
+6. configured /etc/nginx/nginx.conf with xternal-nginx.conf
+7. cd /AppFlowy-Cloud / cp deploy.env .env / docker compose up -d
+
+# Issues currently facing
+
+1. smtp won't send any mails
+
+# Improvements I'm aiming
+
+1. security - priority
+2. have a small ai model to do simple tasks based on lists/notes (eg. combine all the ingredients from @recipe1 @recipe2 and @recipe3 into a single shopping list) - either on-clients-device or something like ollama hosted on another server
+
+#
+
+# 📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦📦
+
+#
+
 # AppFlowy Cloud
 
 AppFlowy Cloud is part of the AppFlowy ecosystem, offering secure user authentication, file storage,
