@@ -207,8 +207,8 @@ services:
         curl https://dl.min.io/client/mc/release/linux-amd64/mc -o /usr/local/bin/mc
         chmod +x /usr/local/bin/mc
         chmod +x /scripts/backup_postgres.sh /scripts/backup_minio.sh
-        echo "0 2 * * * /scripts/backup_postgres.sh" >> /etc/crontabs/root
-        echo "0 3 * * * /scripts/backup_minio.sh" >> /etc/crontabs/root
+        echo "0 2 * * * /script/backup_postgres.sh" >> /etc/crontabs/root
+        echo "0 3 * * * /script/backup_minio.sh" >> /etc/crontabs/root
         crond -f -d 8
       '
 volumes:
