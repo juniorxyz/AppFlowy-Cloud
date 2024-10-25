@@ -24,6 +24,9 @@
 5. edited deploy.env, docker-compose.yml and /migrations/before/20230312043000_supabase_auth.sql (changed passes, smtp mailgun, google oauth, auto-confirm off, openai api, disabled built-in nginx and unused admin servs such as portainer)
 6. configured /etc/nginx/nginx.conf with xternal-nginx.conf
 7. cd /AppFlowy-Cloud / cp deploy.env .env / docker compose up -d
+8. created /home/user/appflowy_backups folder
+9. created backup scripts for postgres and minio in /script/
+10. modified docker-compose.yml to include the volume and add the backup service
 
 # Issues currently facing
 
